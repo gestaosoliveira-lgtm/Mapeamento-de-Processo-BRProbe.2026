@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1280" viewBox="0 0 2400 1280" font-family="Arial, sans-serif">
+
+  <defs>
+    <!-- SETAS -->
+    <marker id="a0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#444" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#b33030" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="a-grn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#2e7d4f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="a-vio" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#6b3fa0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="a-blu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#1a5fa0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="a-amb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#a06010" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ═══════════ PALETA DE CORES POR ÁREA ═══════════
+    CLIENTE    → Azul petróleo     label=#0b4a6f  fundo=#d6eaf8  bloco=#a8d4f0 stroke=#1a6fa0
+    COMERCIAL  → Âmbar/Mostarda   label=#6b4200  fundo=#fef3d0  bloco=#fad978 stroke=#c98a00
+    LOGÍSTICA  → Verde             label=#1a5230  fundo=#d5f0e0  bloco=#85d4a8 stroke=#2e8a56
+    TÉCNICA    → Roxo              label=#3d1a70  fundo=#ece0fb  bloco=#c0a0ef stroke=#7030c0
+    FINANCEIRO → Vermelho coral    label=#7a1a1a  fundo=#fce8e8  bloco=#f0a0a0 stroke=#c03030
+    DIRETORIA  → Grafite           label=#2a2a2a  fundo=#e8e8ec  bloco=#b0b0c0 stroke=#555570
+    SISTEMAS   → Cinza azulado     fundo=#eef0f5
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- FUNDO GERAL -->
+  <rect width="2400" height="1280" fill="#ffffff"/>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <rect x="0" y="0" width="2400" height="68" fill="#1a2d50"/>
+  <circle cx="50" cy="34" r="24" fill="#2471a3"/>
+  <text x="50" y="31" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">br</text>
+  <text x="50" y="44" font-size="8.5" fill="#aad0f0" text-anchor="middle">probe</text>
+  <text x="108" y="24" font-size="15" font-weight="bold" fill="#fff">BR Probe</text>
+  <text x="108" y="48" font-size="20" font-weight="bold" fill="#fff">Mapa Executivo da Jornada Ponta a Ponta</text>
+  <text x="1900" y="26" font-size="11" fill="#a0b8d8" text-anchor="middle">Da demanda comercial a entrega operacional, faturamento e recorrencia</text>
+  <text x="1900" y="48" font-size="10.5" fill="#6a90b8" text-anchor="middle">Versao preliminar — Maio/2026</text>
+
+  <!-- ═══════════ BARRA DE FASES (68→98) ═══════════ -->
+  <rect x="0" y="68" width="2400" height="30" fill="#2a3a52"/>
+  <!-- Frente visível -->
+  <rect x="108" y="72" width="12" height="12" rx="2" fill="#a8d4f0"/>
+  <text x="126" y="82" font-size="10.5" font-weight="bold" fill="#a8d4f0">FRENTE VISIVEL AO CLIENTE</text>
+  <text x="320" y="82" font-size="10" fill="#7090b0">— Cliente · Comercial · Proposta · Negociacao</text>
+  <!-- Bastidores -->
+  <rect x="760" y="72" width="12" height="12" rx="2" fill="#85d4a8"/>
+  <text x="778" y="82" font-size="10.5" font-weight="bold" fill="#85d4a8">BASTIDORES OPERACIONAIS</text>
+  <text x="960" y="82" font-size="10" fill="#7090b0">— Logistica · Tecnica · Financeiro · SAP</text>
+  <!-- Passagem -->
+  <line x1="1480" y1="78" x2="1500" y2="78" stroke="#fad978" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="1508" y="82" font-size="10" fill="#fad978" font-weight="bold">Passagem de bastao</text>
+  <!-- Gargalos -->
+  <rect x="1660" y="73" width="11" height="11" rx="2" fill="#f07070"/>
+  <text x="1676" y="82" font-size="10" fill="#c0c0c0">Gargalo critico</text>
+  <rect x="1778" y="73" width="11" height="11" rx="2" fill="#fad978"/>
+  <text x="1794" y="82" font-size="10" fill="#c0c0c0">Atencao</text>
+  <rect x="1862" y="73" width="11" height="11" rx="2" fill="#b0b0c0"/>
+  <text x="1878" y="82" font-size="10" fill="#c0c0c0">Manual</text>
+  <!-- Pós-venda -->
+  <rect x="2200" y="72" width="12" height="12" rx="2" fill="#c0a0ef"/>
+  <text x="2218" y="82" font-size="10.5" font-weight="bold" fill="#c0a0ef">POS-VENDA</text>
+
+  <!-- ═══════════ LIMITES DAS SWIMLANES ═══════════
+    y=98   topo
+    y=218  fim CLIENTE (h=120)
+    y=388  fim COMERCIAL (h=170)
+    y=528  fim LOGISTICA (h=140)
+    y=718  fim TECNICA (h=190)
+    y=868  fim FINANCEIRO (h=150)
+    y=968  fim DIRETORIA (h=100)
+    y=1068 fim SISTEMAS (h=100)
+    Largura label: 108px
+  ═══════════════════════════════════════════════ -->
+
+  <!-- FUNDOS DAS SWIMLANES (cor por área) -->
+  <!-- CLIENTE - azul petróleo claro -->
+  <rect x="0"   y="98"  width="2400" height="120" fill="#ffffff"/>
+  <!-- COMERCIAL - âmbar claro -->
+  <rect x="0"   y="218" width="2400" height="170" fill="#ffffff"/>
+  <!-- LOGÍSTICA - verde claro -->
+  <rect x="0"   y="388" width="2400" height="140" fill="#ffffff"/>
+  <!-- TÉCNICA - lavanda -->
+  <rect x="0"   y="528" width="2400" height="190" fill="#ffffff"/>
+  <!-- FINANCEIRO - rosa coral claro -->
+  <rect x="0"   y="718" width="2400" height="150" fill="#ffffff"/>
+  <!-- DIRETORIA - cinza frio claro -->
+  <rect x="0"   y="868" width="2400" height="100" fill="#ffffff"/>
+  <!-- SISTEMAS - cinza azulado muito claro -->
+  <rect x="0"   y="968" width="2400" height="100" fill="#ffffff"/>
+
+  <!-- LABELS SWIMLANE (coluna 108px) -->
+  <!-- CLIENTE -->
+  <rect x="0" y="98"  width="108" height="120" fill="#1a6fa0"/>
+  <text transform="translate(54,158) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">CLIENTE</text>
+  <!-- COMERCIAL -->
+  <rect x="0" y="218" width="108" height="170" fill="#c98a00"/>
+  <text transform="translate(54,303) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">COMERCIAL</text>
+  <!-- LOGÍSTICA -->
+  <rect x="0" y="388" width="108" height="140" fill="#2e8a56"/>
+  <text transform="translate(54,458) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">LOGISTICA</text>
+  <!-- TÉCNICA -->
+  <rect x="0" y="528" width="108" height="190" fill="#7030c0"/>
+  <text transform="translate(54,623) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">TECNICA</text>
+  <!-- FINANCEIRO -->
+  <rect x="0" y="718" width="108" height="150" fill="#c03030"/>
+  <text transform="translate(54,793) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">FINANCEIRO</text>
+  <!-- DIRETORIA -->
+  <rect x="0" y="868" width="108" height="100" fill="#444460"/>
+  <text transform="translate(54,918) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">DIRETORIA</text>
+  <!-- SISTEMAS -->
+  <rect x="0" y="968" width="108" height="100" fill="#3a4a68"/>
+  <text transform="translate(54,1018) rotate(-90)" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">SISTEMAS</text>
+  <!-- BORDA TOTAL -->
+  <rect x="0" y="1068" width="2400" height="212" fill="#ffffff"/>
+  <rect x="0" y="1068" width="108" height="212" fill="#2a3548"/>
+  <text transform="translate(54,1174) rotate(-90)" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">GARGALOS</text>
+
+  <!-- LINHAS DIVISÓRIAS SWIMLANE -->
+  <line x1="0" x2="2400" y1="98"   y2="98"   stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="218"  y2="218"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="388"  y2="388"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="528"  y2="528"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="718"  y2="718"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="868"  y2="868"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="968"  y2="968"  stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" x2="2400" y1="1068" y2="1068" stroke="#b0bdd0" stroke-width="2"/>
+  <line x1="108" y1="98" x2="108" y2="1280" stroke="#b0bdd0" stroke-width="2"/>
+
+  <!-- FAIXAS VERTICAIS DE FASE (fundo suave, não compete com cores de área) -->
+  <!-- Frente ao cliente: x=108 até x=750 -->
+  <rect x="108" y="98" width="642" height="870" fill="none"/>
+  <rect x="108" y="98" width="642" height="20" fill="none"/>
+  <text x="429" y="112" font-size="9.5" font-weight="bold" fill="#0b3f60" text-anchor="middle" letter-spacing="1">FRENTE VISIVEL AO CLIENTE</text>
+  <!-- Marco passagem: x=750 até x=850 -->
+  <rect x="750" y="98" width="100" height="870" fill="none"/>
+  <rect x="750" y="98" width="100" height="20" fill="none"/>
+  <text x="800" y="112" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">PASSAGEM</text>
+  <!-- Bastidores: x=850 até x=2130 -->
+  <rect x="850" y="98" width="1280" height="870" fill="none"/>
+  <rect x="850" y="98" width="1280" height="20" fill="none"/>
+  <text x="1490" y="112" font-size="9.5" font-weight="bold" fill="#1a5230" text-anchor="middle" letter-spacing="1">BASTIDORES OPERACIONAIS</text>
+  <!-- Pós-venda: x=2130 até x=2400 -->
+  <rect x="2130" y="98" width="270" height="870" fill="none"/>
+  <rect x="2130" y="98" width="270" height="20" fill="none"/>
+  <text x="2265" y="112" font-size="9.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">POS-VENDA</text>
+
+  <!-- LINHA VERTICAL MARCO PASSAGEM -->
+  <line x1="750"  y1="98" x2="750"  y2="968" stroke="#c98a00" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+  <line x1="2130" y1="98" x2="2130" y2="968" stroke="#7030c0" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BLOCO HELPER — convenções de cor por bloco:
+       Cliente:    fill=#bee4f8  stroke=#1a6fa0
+       Comercial:  fill=#fde096  stroke=#c98a00
+       Logística:  fill=#aae4c4  stroke=#2e8a56
+       Técnica:    fill=#d8b8f8  stroke=#7030c0
+       Financeiro: fill=#f8b8b8  stroke=#c03030
+       Diretoria:  fill=#c8cad8  stroke=#444460
+       Decisão:    fill=#fff8d8  stroke=#c08000
+       Gargalo-R:  fill=#fcd8d8  stroke=#b03030
+       Gargalo-A:  fill=#fef3c0  stroke=#c08a00
+       Sistema pill: fill=#e0e4f0  stroke=#6070a0
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- ═══ COL 1 — ORIGEM x=120..310 ═══ -->
+  <!-- 01 Cliente -->
+  <rect x="120" y="112" width="170" height="88" rx="7" fill="#bee4f8" stroke="#1a6fa0" stroke-width="1.8"/>
+  <text x="205" y="131" font-size="10.5" font-weight="bold" fill="#0b3f60" text-anchor="middle">01 · ORIGEM DA DEMANDA</text>
+  <text x="205" y="148" font-size="9.5" fill="#1a5070" text-anchor="middle">Cliente solicita:</text>
+  <text x="205" y="162" font-size="9.5" fill="#1a5070" text-anchor="middle">manutencao · reparo</text>
+  <text x="205" y="176" font-size="9.5" fill="#1a5070" text-anchor="middle">venda · peca · suporte</text>
+  <!-- Seta para comercial -->
+  <line x1="205" y1="200" x2="205" y2="230" stroke="#444" stroke-width="1.5" marker-end="url(#a0)"/>
+
+  <!-- 01b Prospecção Comercial -->
+  <rect x="120" y="234" width="170" height="108" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="205" y="252" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">Prospeccao / 1 Contato</text>
+  <text x="205" y="267" font-size="9.5" fill="#5a3800" text-anchor="middle">Meta Ads · site · e-mail</text>
+  <text x="205" y="281" font-size="9.5" fill="#5a3800" text-anchor="middle">carteira ativa</text>
+  <text x="205" y="295" font-size="9.5" fill="#5a3800" text-anchor="middle">Canal: ligacao · WhatsApp</text>
+  <text x="205" y="309" font-size="9.5" fill="#5a3800" text-anchor="middle">e-mail</text>
+  <!-- Seta col1→col2 -->
+  <line x1="290" y1="288" x2="325" y2="288" stroke="#c98a00" stroke-width="1.5" marker-end="url(#a-amb)"/>
+
+  <!-- ═══ COL 2 — TRIAGEM x=325..530 ═══ -->
+  <!-- Cliente aguarda -->
+  <rect x="325" y="112" width="178" height="76" rx="7" fill="#bee4f8" stroke="#1a6fa0" stroke-width="1.8"/>
+  <text x="414" y="131" font-size="10" font-weight="bold" fill="#0b3f60" text-anchor="middle">Aguarda retorno</text>
+  <text x="414" y="147" font-size="9.5" fill="#1a5070" text-anchor="middle">Recebe proposta</text>
+  <text x="414" y="162" font-size="9.5" fill="#1a5070" text-anchor="middle">Analisa prazo e preco</text>
+  <text x="414" y="177" font-size="9.5" fill="#1a5070" text-anchor="middle">Envia equipamento</text>
+  <!-- seta col1 cliente → col2 cliente -->
+  <line x1="290" y1="156" x2="325" y2="156" stroke="#1a6fa0" stroke-width="1.5" marker-end="url(#a-blu)"/>
+
+  <!-- 02 Triagem Comercial -->
+  <rect x="325" y="234" width="178" height="120" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="414" y="252" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">02 · TRIAGEM E PROPOSTA</text>
+  <text x="414" y="268" font-size="9.5" fill="#5a3800" text-anchor="middle">Coleta: modelo, defeito,</text>
+  <text x="414" y="282" font-size="9.5" fill="#5a3800" text-anchor="middle">fotos, urgencia</text>
+  <text x="414" y="296" font-size="9.5" fill="#5a3800" text-anchor="middle">Proposta (2 modelos)</text>
+  <text x="414" y="310" font-size="9.5" fill="#5a3800" text-anchor="middle">Verifica credito / rating</text>
+  <text x="414" y="324" font-size="9.5" fill="#5a3800" text-anchor="middle">Contrato / Termo de Aceite</text>
+  <!-- Gargalos -->
+  <rect x="331" y="358" width="166" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="414" y="369" font-size="9" fill="#7a1a1a" text-anchor="middle">Pre-analise incompleta</text>
+  <rect x="331" y="378" width="166" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="414" y="389" font-size="9" fill="#7a1a1a" text-anchor="middle">Planilha vendedores c/ falhas</text>
+  <!-- Seta col2→col3 -->
+  <line x1="503" y1="294" x2="538" y2="294" stroke="#c98a00" stroke-width="1.5" marker-end="url(#a-amb)"/>
+
+  <!-- ═══ COL 3 — NEGOCIAÇÃO x=538..738 ═══ -->
+  <!-- Negociação Comercial -->
+  <rect x="538" y="234" width="178" height="108" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="627" y="252" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">Negociacao</text>
+  <text x="627" y="268" font-size="9.5" fill="#5a3800" text-anchor="middle">Contorno de objecoes</text>
+  <text x="627" y="282" font-size="9.5" fill="#5a3800" text-anchor="middle">Alinha aceite detalhado</text>
+  <text x="627" y="296" font-size="9.5" fill="#5a3800" text-anchor="middle">Proposta Financeira</text>
+  <text x="627" y="310" font-size="9.5" fill="#5a3800" text-anchor="middle">Script comercial</text>
+  <text x="627" y="326" font-size="9.5" fill="#5a3800" text-anchor="middle">Desconto: ate 5%; acima → dir.</text>
+  <!-- Seta para decisão aprovação -->
+  <line x1="627" y1="342" x2="627" y2="360" stroke="#c98a00" stroke-width="1.5" marker-end="url(#a-amb)"/>
+
+  <!-- Decisão: cliente aprova? -->
+  <polygon points="627,360 673,384 627,408 581,384" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="627" y="380" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Cliente</text>
+  <text x="627" y="393" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">aprova?</text>
+  <text x="680" y="382" font-size="9" fill="#2e7d4f">Sim</text>
+  <line x1="673" y1="384" x2="716" y2="384" stroke="#2e7d4f" stroke-width="1.5" marker-end="url(#a-grn)"/>
+  <text x="582" y="420" font-size="9" fill="#b33030">Nao</text>
+  <line x1="627" y1="408" x2="627" y2="430" stroke="#b33030" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <rect x="560" y="430" width="134" height="28" rx="5" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="627" y="448" font-size="9" fill="#7a1a1a" text-anchor="middle">Negociacao reinicia</text>
+
+  <!-- 03 Proposta aprovada -->
+  <rect x="716" y="364" width="96" height="40" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="2"/>
+  <text x="764" y="380" font-size="9.5" font-weight="bold" fill="#6b4200" text-anchor="middle">03 · PROPOSTA</text>
+  <text x="764" y="393" font-size="9.5" font-weight="bold" fill="#6b4200" text-anchor="middle">APROVADA</text>
+
+  <!-- ═══ MARCO DE PASSAGEM x=750~850 ═══ -->
+  <rect x="756" y="408" width="90" height="170" rx="8" fill="#fffbe8" stroke="#c98a00" stroke-width="1.5"/>
+  <text x="801" y="430" font-size="9.5" font-weight="bold" fill="#6b4200" text-anchor="middle">PASSAGEM</text>
+  <text x="801" y="444" font-size="9.5" font-weight="bold" fill="#6b4200" text-anchor="middle">DE BASTAO</text>
+  <line x1="801" y1="452" x2="801" y2="464" stroke="#c98a00" stroke-width="1"/>
+  <text x="801" y="477" font-size="8.5" fill="#6b4200" text-anchor="middle">Ploomes</text>
+  <text x="801" y="491" font-size="8.5" fill="#6b4200" text-anchor="middle">SAP</text>
+  <text x="801" y="510" font-size="8" fill="#b33030" text-anchor="middle">Nao integrados!</text>
+  <text x="801" y="524" font-size="8" fill="#b33030" text-anchor="middle">Consulta via</text>
+  <text x="801" y="538" font-size="8" fill="#b33030" text-anchor="middle">prints/e-mail</text>
+  <rect x="752" y="548" width="94" height="82" rx="6" fill="#fef3c0" stroke="#c08a00" stroke-width="1.5"/>
+  <text x="799" y="564" font-size="8.5" font-weight="bold" fill="#6b4200" text-anchor="middle">ATENCAO</text>
+  <text x="799" y="578" font-size="8.5" fill="#6b4200" text-anchor="middle">OS so e aberta</text>
+  <text x="799" y="592" font-size="8.5" fill="#6b4200" text-anchor="middle">pela Logistica</text>
+  <text x="799" y="606" font-size="8.5" fill="#6b4200" text-anchor="middle">quando equip.</text>
+  <text x="799" y="620" font-size="8.5" fill="#6b4200" text-anchor="middle">chega fisicamente</text>
+
+  <!-- ═══ COL 4 — AGUARDANDO EQUIP x=858..1060 ═══ -->
+  <!-- 04 Aguardando equipamento Comercial -->
+  <rect x="858" y="234" width="172" height="84" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="944" y="252" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">04 · AGUARDANDO</text>
+  <text x="944" y="267" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">EQUIPAMENTO</text>
+  <text x="944" y="283" font-size="9.5" fill="#5a3800" text-anchor="middle">Cliente envia transdutor</text>
+  <text x="944" y="297" font-size="9.5" fill="#5a3800" text-anchor="middle">Comercial anota dados base</text>
+  <text x="944" y="311" font-size="9.5" fill="#5a3800" text-anchor="middle">Informa cliente do prazo</text>
+  <rect x="864" y="322" width="160" height="16" rx="8" fill="#fef3c0" stroke="#c08a00" stroke-width="1"/>
+  <text x="944" y="333" font-size="9" fill="#6b4200" text-anchor="middle">Equip. diferente = frete extra</text>
+  <!-- Seta col3 proposta → col4 -->
+  <line x1="812" y1="384" x2="858" y2="306" stroke="#c98a00" stroke-width="1.5" marker-end="url(#a-amb)"/>
+
+  <!-- Cliente col 4: aguarda entrega, sem envio explícito -->
+  <rect x="858" y="112" width="172" height="72" rx="7" fill="#bee4f8" stroke="#1a6fa0" stroke-width="1.8"/>
+  <text x="944" y="131" font-size="10" font-weight="bold" fill="#0b3f60" text-anchor="middle">Aguarda confirmacao</text>
+  <text x="944" y="147" font-size="9.5" fill="#1a5070" text-anchor="middle">de recebimento</text>
+  <text x="944" y="162" font-size="9.5" fill="#1a5070" text-anchor="middle">Envia equipamento</text>
+  <text x="944" y="177" font-size="9.5" fill="#1a5070" text-anchor="middle">pelos Correios</text>
+  <!-- seta cliente col3→col4 -->
+  <line x1="503" y1="150" x2="858" y2="150" stroke="#1a6fa0" stroke-width="1.5" marker-end="url(#a-blu)"/>
+
+  <!-- ═══ COL 4 LOGÍSTICA: RECEBIMENTO E ABERTURA DA OS ═══ -->
+  <!-- Seta: equipamento chega (via correios) → logística -->
+  <!-- Seta de chegada: vem de "fora" (cliente enviou) chegando em logística -->
+  <line x1="944" y1="342" x2="944" y2="400" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a0)"/>
+  <text x="960" y="375" font-size="8.5" fill="#666" font-style="italic">via Correios</text>
+
+  <!-- 05 RECEBIMENTO E ABERTURA DA OS (Logística) -->
+  <rect x="858" y="400" width="172" height="118" rx="7" fill="#aae4c4" stroke="#2e8a56" stroke-width="2"/>
+  <text x="944" y="419" font-size="10.5" font-weight="bold" fill="#1a5230" text-anchor="middle">05 · RECEBIMENTO</text>
+  <text x="944" y="434" font-size="10.5" font-weight="bold" fill="#1a5230" text-anchor="middle">ABERTURA DA OS</text>
+  <text x="944" y="450" font-size="9.5" fill="#1a4028" text-anchor="middle">Entrada carga/descarga</text>
+  <text x="944" y="464" font-size="9.5" fill="#1a4028" text-anchor="middle">Quarentena + higienizacao</text>
+  <text x="944" y="478" font-size="9.5" fill="#1a4028" text-anchor="middle">Inspecao + foto registro</text>
+  <text x="944" y="492" font-size="9.5" fill="#1a4028" text-anchor="middle">ABRE OS OFICIAL NO SAP</text>
+  <text x="944" y="506" font-size="9.5" fill="#1a4028" text-anchor="middle">Armazenagem cacamba/gaveta</text>
+  <!-- Destaque SAP -->
+  <rect x="866" y="510" width="156" height="16" rx="8" fill="#e0e4f0" stroke="#6070a0" stroke-width="1"/>
+  <text x="944" y="521" font-size="9" fill="#2a3a60" text-anchor="middle">SAP · NF de remessa</text>
+  <!-- Gargalo -->
+  <rect x="866" y="530" width="156" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="944" y="541" font-size="9" fill="#7a1a1a" text-anchor="middle">Fotos nao integradas ao SAP</text>
+
+  <!-- Seta logística → comunicar comercial (seta para cima)  -->
+  <line x1="1030" y1="460" x2="1060" y2="460" stroke="#444" stroke-width="1.2"/>
+  <line x1="1060" y1="460" x2="1060" y2="276" stroke="#444" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="1060" y1="276" x2="1030" y2="276" stroke="#444" stroke-width="1.2" marker-end="url(#a0)"/>
+  <!-- Label comunicar -->
+  <rect x="1062" y="350" width="82" height="30" rx="4" fill="#fde096" stroke="#c98a00" stroke-width="1"/>
+  <text x="1103" y="363" font-size="8.5" fill="#6b4200" text-anchor="middle">Comunicar</text>
+  <text x="1103" y="376" font-size="8.5" fill="#6b4200" text-anchor="middle">Comercial</text>
+
+  <!-- ═══ COL 5 — DIAGNÓSTICO x=1060+120=1148..1340 ═══ -->
+  <!-- Seta logística → técnica diagnóstico -->
+  <line x1="944" y1="518" x2="944" y2="545" stroke="#2e8a56" stroke-width="1.5"/>
+  <line x1="944" y1="545" x2="1148" y2="560" stroke="#2e8a56" stroke-width="1.5" marker-end="url(#a-grn)"/>
+
+  <!-- Decisão: teste entrada feito? -->
+  <polygon points="1218,540 1262,564 1218,588 1174,564" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="1218" y="560" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Teste</text>
+  <text x="1218" y="573" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">entrada?</text>
+  <text x="1268" y="562" font-size="9" fill="#2e7d4f">Sim</text>
+  <line x1="1262" y1="564" x2="1300" y2="564" stroke="#2e7d4f" stroke-width="1.3" marker-end="url(#a-grn)"/>
+  <text x="1150" y="550" font-size="9" fill="#b33030">Nao</text>
+  <rect x="1152" y="500" width="90" height="28" rx="4" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1197" y="518" font-size="9" fill="#7a1a1a" text-anchor="middle">Sem Teste</text>
+  <line x1="1197" y1="540" x2="1197" y2="528" stroke="#b33030" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a-red)"/>
+
+  <!-- 06 DIAGNÓSTICO (Técnica) -->
+  <rect x="1148" y="572" width="172" height="130" rx="7" fill="#d8b8f8" stroke="#7030c0" stroke-width="1.8"/>
+  <text x="1234" y="590" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">06 · DIAGNOSTICO</text>
+  <text x="1234" y="604" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">TECNICO</text>
+  <text x="1234" y="620" font-size="9.5" fill="#3a1060" text-anchor="middle">Tecnico retira da cacamba</text>
+  <text x="1234" y="634" font-size="9.5" fill="#3a1060" text-anchor="middle">Teste de entrada (48h)</text>
+  <text x="1234" y="648" font-size="9.5" fill="#3a1060" text-anchor="middle">Identifica o problema</text>
+  <text x="1234" y="662" font-size="9.5" fill="#3a1060" text-anchor="middle">Anamnese registrada SAP</text>
+  <text x="1234" y="676" font-size="9.5" fill="#3a1060" text-anchor="middle">Sugestao de reparo</text>
+  <text x="1234" y="690" font-size="9.5" fill="#3a1060" text-anchor="middle">Coordenacao area tecnica</text>
+  <!-- Gargalos -->
+  <rect x="1154" y="706" width="160" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1234" y="717" font-size="9" fill="#7a1a1a" text-anchor="middle">SAP nao atualizado c/ aderencia</text>
+  <rect x="1154" y="726" width="160" height="16" rx="8" fill="#fef3c0" stroke="#c08a00" stroke-width="1"/>
+  <text x="1234" y="737" font-size="9" fill="#6b4200" text-anchor="middle">~50% dos servicos atrasam</text>
+  <!-- Seta diagnóstico → orçamento -->
+  <line x1="1320" y1="637" x2="1358" y2="637" stroke="#7030c0" stroke-width="1.5" marker-end="url(#a-vio)"/>
+
+  <!-- ═══ COL 6 — ORÇAMENTO TÉCNICO x=1358..1550 ═══ -->
+  <!-- Orçamento Técnico -->
+  <rect x="1358" y="572" width="172" height="108" rx="7" fill="#d8b8f8" stroke="#7030c0" stroke-width="1.8"/>
+  <text x="1444" y="590" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">Orcamento Tecnico</text>
+  <text x="1444" y="606" font-size="9.5" fill="#3a1060" text-anchor="middle">Tecnica: ficha e laudo</text>
+  <text x="1444" y="620" font-size="9.5" fill="#3a1060" text-anchor="middle">Composicao laudo tecnico</text>
+  <text x="1444" y="634" font-size="9.5" fill="#3a1060" text-anchor="middle">Comercial: acessa SAP</text>
+  <text x="1444" y="648" font-size="9.5" fill="#3a1060" text-anchor="middle">Gera proposta ao cliente</text>
+  <text x="1444" y="662" font-size="9.5" fill="#3a1060" text-anchor="middle">Comunicacao ao comercial</text>
+  <!-- Seta orcamento → aprovação (sobe ao comercial) -->
+  <line x1="1444" y1="572" x2="1444" y2="388" stroke="#7030c0" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#a-vio)"/>
+
+  <!-- 07 APROVAÇÃO DO ORÇAMENTO TÉCNICO (Comercial) -->
+  <rect x="1358" y="234" width="172" height="120" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="1444" y="252" font-size="10" font-weight="bold" fill="#6b4200" text-anchor="middle">07 · APROVACAO DO</text>
+  <text x="1444" y="266" font-size="10" font-weight="bold" fill="#6b4200" text-anchor="middle">ORCAMENTO TECNICO</text>
+  <text x="1444" y="282" font-size="9.5" fill="#5a3800" text-anchor="middle">Comercial apresenta retorno</text>
+  <text x="1444" y="296" font-size="9.5" fill="#5a3800" text-anchor="middle">tecnico ao cliente</text>
+  <text x="1444" y="312" font-size="9.5" fill="#5a3800" text-anchor="middle">Cliente: aprova · reprova</text>
+  <text x="1444" y="326" font-size="9.5" fill="#5a3800" text-anchor="middle">compativel · devolucao</text>
+  <text x="1444" y="342" font-size="9.5" fill="#5a3800" text-anchor="middle">Requisicao de Compras</text>
+  <!-- Gargalo -->
+  <rect x="1364" y="358" width="160" height="16" rx="8" fill="#fef3c0" stroke="#c08a00" stroke-width="1"/>
+  <text x="1444" y="369" font-size="9" fill="#6b4200" text-anchor="middle">Equip. pode ficar parado</text>
+
+  <!-- Cliente col 7: recebe retorno -->
+  <rect x="1358" y="112" width="172" height="68" rx="7" fill="#bee4f8" stroke="#1a6fa0" stroke-width="1.8"/>
+  <text x="1444" y="131" font-size="10" font-weight="bold" fill="#0b3f60" text-anchor="middle">Recebe retorno tecnico</text>
+  <text x="1444" y="147" font-size="9.5" fill="#1a5070" text-anchor="middle">Aprova / reprova /</text>
+  <text x="1444" y="162" font-size="9.5" fill="#1a5070" text-anchor="middle">solicita compativel</text>
+  <text x="1444" y="177" font-size="9.5" fill="#1a5070" text-anchor="middle">ou devolucao</text>
+  <!-- Seta comercial → cliente -->
+  <line x1="1444" y1="234" x2="1444" y2="180" stroke="#1a6fa0" stroke-width="1.3" marker-end="url(#a-blu)"/>
+  <!-- Seta cliente → comercial (resposta) -->
+  <line x1="1474" y1="180" x2="1474" y2="234" stroke="#c98a00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ═══ COL 7 — EXECUÇÃO TÉCNICA x=1548..1740 ═══ -->
+  <!-- Decisão reparo externo? -->
+  <polygon points="1634,532 1678,556 1634,580 1590,556" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="1634" y="552" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Reparo</text>
+  <text x="1634" y="565" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">externo?</text>
+  <!-- Seta orcamento → decisão externo -->
+  <line x1="1530" y1="628" x2="1530" y2="556" stroke="#444" stroke-width="1"/>
+  <line x1="1530" y1="556" x2="1590" y2="556" stroke="#444" stroke-width="1" marker-end="url(#a0)"/>
+  <text x="1683" y="554" font-size="9" fill="#2e7d4f">Nao</text>
+  <line x1="1678" y1="556" x2="1718" y2="580" stroke="#2e7d4f" stroke-width="1.3" marker-end="url(#a-grn)"/>
+  <text x="1591" y="522" font-size="9" fill="#b33030">Sim</text>
+  <rect x="1568" y="486" width="132" height="28" rx="5" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1634" y="504" font-size="9" fill="#7a1a1a" text-anchor="middle">Requisitar Reparo Externo</text>
+  <line x1="1634" y1="532" x2="1634" y2="514" stroke="#b33030" stroke-width="1" marker-end="url(#a-red)"/>
+
+  <!-- 08 EXECUÇÃO TÉCNICA -->
+  <rect x="1558" y="580" width="172" height="140" rx="7" fill="#d8b8f8" stroke="#7030c0" stroke-width="1.8"/>
+  <text x="1644" y="598" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">08 · EXECUCAO</text>
+  <text x="1644" y="612" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">TECNICA</text>
+  <text x="1644" y="628" font-size="9.5" fill="#3a1060" text-anchor="middle">Verifica servicos aprovados</text>
+  <text x="1644" y="642" font-size="9.5" fill="#3a1060" text-anchor="middle">Aponta tecnico (FIFO)</text>
+  <text x="1644" y="656" font-size="9.5" fill="#3a1060" text-anchor="middle">Verifica materiais e insumos</text>
+  <text x="1644" y="670" font-size="9.5" fill="#3a1060" text-anchor="middle">Reparo · Manutencao</text>
+  <text x="1644" y="684" font-size="9.5" fill="#3a1060" text-anchor="middle">Troca · Testes especificos</text>
+  <text x="1644" y="698" font-size="9.5" fill="#3a1060" text-anchor="middle">Supervisao setor reparo</text>
+  <!-- Gargalos -->
+  <rect x="1564" y="724" width="160" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1644" y="735" font-size="9" fill="#7a1a1a" text-anchor="middle">Controle por post-its</text>
+  <rect x="1564" y="744" width="160" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1644" y="755" font-size="9" fill="#7a1a1a" text-anchor="middle">SAP atualizacao irregular</text>
+  <rect x="1564" y="764" width="160" height="16" rx="8" fill="#fef3c0" stroke="#c08a00" stroke-width="1"/>
+  <text x="1644" y="775" font-size="9" fill="#6b4200" text-anchor="middle">Importacao atrasa SLA</text>
+
+  <!-- Decisão importar peça -->
+  <polygon points="1644,462 1688,486 1644,510 1600,486" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="1644" y="482" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Importar</text>
+  <text x="1644" y="495" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">peca?</text>
+  <line x1="1644" y1="580" x2="1644" y2="510" stroke="#444" stroke-width="1" marker-end="url(#a0)"/>
+  <text x="1644" y="452" font-size="9" fill="#b33030">Sim</text>
+  <rect x="1566" y="414" width="156" height="32" rx="5" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1644" y="429" font-size="9" fill="#7a1a1a" text-anchor="middle">Requisicao de Compras</text>
+  <text x="1644" y="442" font-size="9" fill="#7a1a1a" text-anchor="middle">Compra Nac. / Importacao</text>
+  <line x1="1644" y1="462" x2="1644" y2="446" stroke="#b33030" stroke-width="1" marker-end="url(#a-red)"/>
+  <text x="1693" y="484" font-size="9" fill="#2e7d4f">Nao</text>
+  <!-- Diretoria autoriza -->
+  <rect x="1566" y="880" width="156" height="52" rx="7" fill="#c8cad8" stroke="#444460" stroke-width="1.5"/>
+  <text x="1644" y="898" font-size="9.5" font-weight="bold" fill="#2a2a2a" text-anchor="middle">Diretoria</text>
+  <text x="1644" y="912" font-size="9" fill="#2a2a2a" text-anchor="middle">Autoriza compra materiais</text>
+  <text x="1644" y="926" font-size="9" fill="#2a2a2a" text-anchor="middle">Valida fornecedor intl.</text>
+  <line x1="1644" y1="880" x2="1644" y2="446" stroke="#444460" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#a0)"/>
+
+  <!-- ═══ COL 8 — TESTE DE SAÍDA x=1748..1940 ═══ -->
+  <!-- Seta execução → decisão teste saída -->
+  <line x1="1730" y1="650" x2="1730" y2="570" stroke="#444" stroke-width="1"/>
+  <line x1="1730" y1="570" x2="1806" y2="570" stroke="#444" stroke-width="1" marker-end="url(#a0)"/>
+  <polygon points="1876,548 1920,572 1876,596 1832,572" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="1876" y="568" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Teste</text>
+  <text x="1876" y="581" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">saida?</text>
+  <text x="1925" y="570" font-size="9" fill="#2e7d4f">Sim</text>
+  <line x1="1920" y1="572" x2="1960" y2="596" stroke="#2e7d4f" stroke-width="1.3" marker-end="url(#a-grn)"/>
+  <text x="1834" y="540" font-size="9" fill="#b33030">Nao</text>
+  <rect x="1820" y="504" width="112" height="28" rx="4" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="1876" y="522" font-size="9" fill="#7a1a1a" text-anchor="middle">Registra sem teste</text>
+  <line x1="1876" y1="548" x2="1876" y2="532" stroke="#b33030" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a-red)"/>
+
+  <!-- 09 TESTE DE SAÍDA E LIBERAÇÃO (Técnica) -->
+  <rect x="1768" y="596" width="172" height="102" rx="7" fill="#d8b8f8" stroke="#7030c0" stroke-width="1.8"/>
+  <text x="1854" y="614" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">09 · TESTE DE SAIDA</text>
+  <text x="1854" y="628" font-size="10.5" font-weight="bold" fill="#3d1a70" text-anchor="middle">E LIBERACAO</text>
+  <text x="1854" y="644" font-size="9.5" fill="#3a1060" text-anchor="middle">Teste qualidade saida</text>
+  <text x="1854" y="658" font-size="9.5" fill="#3a1060" text-anchor="middle">(maq. US&amp;Cia / parceiro)</text>
+  <text x="1854" y="672" font-size="9.5" fill="#3a1060" text-anchor="middle">Composicao ficha tecnica</text>
+  <text x="1854" y="686" font-size="9.5" fill="#3a1060" text-anchor="middle">Libera para logistica</text>
+
+  <!-- Seta técnica → financeiro -->
+  <line x1="1940" y1="647" x2="1980" y2="647" stroke="#444" stroke-width="1.5"/>
+  <line x1="1980" y1="647" x2="1980" y2="730" stroke="#444" stroke-width="1.5" marker-end="url(#a0)"/>
+
+  <!-- ═══ COL 8 LOGÍSTICA — EXPEDIÇÃO ═══ -->
+  <!-- Seta financeiro → expedição (vai depois) -->
+  <!-- 11 Expedição (Logística) -->
+  <rect x="1768" y="400" width="172" height="108" rx="7" fill="#aae4c4" stroke="#2e8a56" stroke-width="2"/>
+  <text x="1854" y="419" font-size="10.5" font-weight="bold" fill="#1a5230" text-anchor="middle">11 · EXPEDICAO</text>
+  <text x="1854" y="433" font-size="10.5" font-weight="bold" fill="#1a5230" text-anchor="middle">E DEVOLUCAO</text>
+  <text x="1854" y="449" font-size="9.5" fill="#1a4028" text-anchor="middle">Higienizacao</text>
+  <text x="1854" y="463" font-size="9.5" fill="#1a4028" text-anchor="middle">Registro fotografico</text>
+  <text x="1854" y="477" font-size="9.5" fill="#1a4028" text-anchor="middle">Embalar c/ embalagem original</text>
+  <text x="1854" y="491" font-size="9.5" fill="#1a4028" text-anchor="middle">Lacre + Doc. de garantia</text>
+  <text x="1854" y="505" font-size="9.5" fill="#1a4028" text-anchor="middle">Aviso comercial do envio</text>
+
+  <!-- ═══ COL 9 — VALIDAÇÃO FINANCEIRA x=1958..2130 ═══ -->
+  <!-- 10 VALIDAÇÃO FINANCEIRA (Financeiro) -->
+  <rect x="1958" y="730" width="172" height="128" rx="7" fill="#f8b8b8" stroke="#c03030" stroke-width="1.8"/>
+  <text x="2044" y="748" font-size="10.5" font-weight="bold" fill="#7a1a1a" text-anchor="middle">10 · VALIDACAO</text>
+  <text x="2044" y="762" font-size="10.5" font-weight="bold" fill="#7a1a1a" text-anchor="middle">FINANCEIRA</text>
+  <text x="2044" y="778" font-size="9.5" fill="#6a1010" text-anchor="middle">Confere pagamento</text>
+  <text x="2044" y="792" font-size="9.5" fill="#6a1010" text-anchor="middle">Valida boleto / NF</text>
+  <text x="2044" y="806" font-size="9.5" fill="#6a1010" text-anchor="middle">Verifica inadimplencia</text>
+  <text x="2044" y="820" font-size="9.5" fill="#6a1010" text-anchor="middle">Autoriza ou reter envio</text>
+  <text x="2044" y="834" font-size="9.5" fill="#6a1010" text-anchor="middle">Emissao de NF</text>
+  <text x="2044" y="848" font-size="9.5" fill="#6a1010" text-anchor="middle">Coord. contas a receber</text>
+  <!-- Gargalos financeiro -->
+  <rect x="1964" y="860" width="160" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="2044" y="871" font-size="9" fill="#7a1a1a" text-anchor="middle">Sem politica formal escrita</text>
+  <rect x="1964" y="880" width="160" height="16" rx="8" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="2044" y="891" font-size="9" fill="#7a1a1a" text-anchor="middle">Processo manual/concentrado</text>
+
+  <!-- Decisão: financeiro libera? -->
+  <polygon points="2044,642 2088,666 2044,690 2000,666" fill="#fff8d8" stroke="#c08000" stroke-width="1.5"/>
+  <text x="2044" y="662" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">Financeiro</text>
+  <text x="2044" y="675" font-size="9" font-weight="bold" fill="#6b4200" text-anchor="middle">libera?</text>
+  <line x1="2044" y1="690" x2="2044" y2="730" stroke="#444" stroke-width="1.3" marker-end="url(#a0)"/>
+  <text x="2050" y="714" font-size="9" fill="#2e7d4f">Sim</text>
+  <text x="2093" y="664" font-size="9" fill="#b33030">Nao</text>
+  <rect x="2095" y="652" width="112" height="28" rx="4" fill="#fcd8d8" stroke="#b03030" stroke-width="1"/>
+  <text x="2151" y="670" font-size="9" fill="#7a1a1a" text-anchor="middle">Equipamento retido</text>
+  <line x1="2088" y1="666" x2="2095" y2="666" stroke="#b33030" stroke-width="1" marker-end="url(#a-red)"/>
+
+  <!-- Seta financeiro → expedição -->
+  <line x1="1958" y1="794" x2="1940" y2="794" stroke="#a06010" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <line x1="1940" y1="794" x2="1940" y2="454" stroke="#a06010" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <line x1="1940" y1="454" x2="1940" y2="452" stroke="#a06010" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#a-amb)"/>
+
+  <!-- Seta expedição → cliente (devolução) -->
+  <line x1="1854" y1="400" x2="1854" y2="194" stroke="#1a6fa0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="1854" y1="194" x2="2148" y2="194" stroke="#1a6fa0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="2148" y1="194" x2="2148" y2="178" stroke="#1a6fa0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a-blu)"/>
+
+  <!-- ═══ COL PÓS-VENDA x=2148..2390 ═══ -->
+  <!-- Cliente recebe equipamento reparado -->
+  <rect x="2148" y="112" width="172" height="62" rx="7" fill="#bee4f8" stroke="#1a6fa0" stroke-width="1.8"/>
+  <text x="2234" y="131" font-size="10" font-weight="bold" fill="#0b3f60" text-anchor="middle">Recebe equipamento</text>
+  <text x="2234" y="147" font-size="9.5" fill="#1a5070" text-anchor="middle">reparado</text>
+  <text x="2234" y="163" font-size="9.5" fill="#1a5070" text-anchor="middle">Confirma satisfacao</text>
+
+  <!-- Seta cliente → comercial pós-venda -->
+  <line x1="2234" y1="174" x2="2234" y2="234" stroke="#c98a00" stroke-width="1.3" marker-end="url(#a-amb)"/>
+
+  <!-- 12 Pós-venda e Recorrência (Comercial) -->
+  <rect x="2148" y="234" width="172" height="134" rx="7" fill="#fde096" stroke="#c98a00" stroke-width="1.8"/>
+  <text x="2234" y="252" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">12 · POS-VENDA</text>
+  <text x="2234" y="267" font-size="10.5" font-weight="bold" fill="#6b4200" text-anchor="middle">E RECORRENCIA</text>
+  <text x="2234" y="284" font-size="9.5" fill="#5a3800" text-anchor="middle">Retoma relacionamento</text>
+  <text x="2234" y="298" font-size="9.5" fill="#5a3800" text-anchor="middle">Pesquisa de satisfacao</text>
+  <text x="2234" y="312" font-size="9.5" fill="#5a3800" text-anchor="middle">Nova oportunidade</text>
+  <text x="2234" y="326" font-size="9.5" fill="#5a3800" text-anchor="middle">Regua de manutencao</text>
+  <text x="2234" y="340" font-size="9.5" fill="#5a3800" text-anchor="middle">Agendamento SAC</text>
+  <text x="2234" y="354" font-size="9.5" fill="#5a3800" text-anchor="middle">Prospect Carteira Focal</text>
+
+  <!-- ═══ SWIMLANE DIRETORIA ═══ -->
+  <!-- Coordenação Geral -->
+  <rect x="120" y="882" width="260" height="68" rx="7" fill="#c8cad8" stroke="#444460" stroke-width="1.5"/>
+  <text x="250" y="900" font-size="10" font-weight="bold" fill="#2a2a2a" text-anchor="middle">Coordenacao da Diretoria</text>
+  <text x="250" y="916" font-size="9.5" fill="#2a2a2a" text-anchor="middle">Reporte de desempenho aos socios</text>
+  <text x="250" y="930" font-size="9.5" fill="#2a2a2a" text-anchor="middle">Avaliacao e controle dos gestores</text>
+  <text x="250" y="944" font-size="9.5" fill="#2a2a2a" text-anchor="middle">Tomada de decisao estrategica</text>
+
+  <!-- Relações Institucionais -->
+  <rect x="398" y="882" width="160" height="60" rx="7" fill="#c8cad8" stroke="#444460" stroke-width="1.5"/>
+  <text x="478" y="900" font-size="9.5" font-weight="bold" fill="#2a2a2a" text-anchor="middle">Rel. Institucionais</text>
+  <text x="478" y="916" font-size="9" fill="#2a2a2a" text-anchor="middle">Divulgacao visao BRP</text>
+  <text x="478" y="930" font-size="9" fill="#2a2a2a" text-anchor="middle">Certificacao / qualidade</text>
+
+  <!-- Sem painel gerencial -->
+  <rect x="858" y="882" width="200" height="60" rx="7" fill="#fcd8d8" stroke="#b03030" stroke-width="2"/>
+  <text x="958" y="901" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">FALTA PAINEL GERENCIAL</text>
+  <text x="958" y="917" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Sem visibilidade de volume,</text>
+  <text x="958" y="931" font-size="9.5" fill="#7a1a1a" text-anchor="middle">prazo, atraso e gargalos</text>
+
+  <!-- ═══ SWIMLANE SISTEMAS ═══ -->
+  <rect x="120" y="982" width="216" height="52" rx="7" fill="#e0e4f0" stroke="#6070a0" stroke-width="1.5"/>
+  <text x="228" y="1002" font-size="10" font-weight="bold" fill="#1a2d50" text-anchor="middle">Ploomes</text>
+  <text x="228" y="1018" font-size="9.5" fill="#2a3a60" text-anchor="middle">Jornada comercial</text>
+  <text x="228" y="1032" font-size="9" fill="#6a7090" text-anchor="middle">Fases 01–04 · 07 · 12</text>
+
+  <rect x="352" y="982" width="216" height="52" rx="7" fill="#e0e4f0" stroke="#6070a0" stroke-width="1.5"/>
+  <text x="460" y="1002" font-size="10" font-weight="bold" fill="#1a2d50" text-anchor="middle">SAP</text>
+  <text x="460" y="1018" font-size="9.5" fill="#2a3a60" text-anchor="middle">Operacao, OS e status</text>
+  <text x="460" y="1032" font-size="9" fill="#b03030" text-anchor="middle">Baixa aderencia de atualizacao</text>
+
+  <rect x="584" y="982" width="200" height="52" rx="7" fill="#e0e4f0" stroke="#6070a0" stroke-width="1.5"/>
+  <text x="684" y="1002" font-size="10" font-weight="bold" fill="#1a2d50" text-anchor="middle">Planilhas</text>
+  <text x="684" y="1018" font-size="9.5" fill="#2a3a60" text-anchor="middle">Emprestimos · Vendas</text>
+  <text x="684" y="1032" font-size="9" fill="#b03030" text-anchor="middle">Controles manuais (com falhas)</text>
+
+  <rect x="800" y="982" width="216" height="52" rx="7" fill="#e0e4f0" stroke="#6070a0" stroke-width="1.5"/>
+  <text x="908" y="1002" font-size="10" font-weight="bold" fill="#1a2d50" text-anchor="middle">Fotos / Servidor</text>
+  <text x="908" y="1018" font-size="9.5" fill="#2a3a60" text-anchor="middle">Evidencias operacionais</text>
+  <text x="908" y="1032" font-size="9" fill="#b03030" text-anchor="middle">Pouco integradas ao SAP</text>
+
+  <rect x="1032" y="982" width="216" height="52" rx="7" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="1140" y="1002" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">E-mail / Prints</text>
+  <text x="1140" y="1018" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Comunicacao manual status</text>
+  <text x="1140" y="1032" font-size="9" fill="#7a1a1a" text-anchor="middle">entre Comercial e Operacao</text>
+
+  <rect x="1264" y="982" width="560" height="52" rx="7" fill="#d4ebf8" stroke="#1a6fa0" stroke-width="1.5"/>
+  <text x="1544" y="1000" font-size="10" font-weight="bold" fill="#0b3f60" text-anchor="middle">Status a espelhar no Ploomes:</text>
+  <text x="1544" y="1016" font-size="9" fill="#1a5070" text-anchor="middle">Ag. equip. · Recebido · Em diagnostico · Orcamento em elabor. · Ag. aprovacao · Em manutencao · Ag. peca · Teste saida · Liberado · Ag. Fin. · Enviado · OS concluida</text>
+  <text x="1544" y="1032" font-size="9" fill="#b03030" text-anchor="middle">Hoje: consulta manual via prints/e-mail — sem integracao Ploomes/SAP</text>
+
+  <!-- ═══ PAINEL DE GARGALOS (rodapé) ═══ -->
+  <!-- Linha de gargalos y=1068..1280 -->
+  <!-- Critico 1 -->
+  <rect x="120" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="225" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G1 · CRITICO</text>
+  <text x="225" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Ploomes e SAP</text>
+  <text x="225" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">nao integrados</text>
+
+  <rect x="346" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="451" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G2 · CRITICO</text>
+  <text x="451" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Pre-analise comercial</text>
+  <text x="451" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">incompleta</text>
+
+  <rect x="572" y="1082" width="210" height="60" rx="6" fill="#fef3c0" stroke="#c08a00" stroke-width="1.5"/>
+  <text x="677" y="1100" font-size="10" font-weight="bold" fill="#6b4200" text-anchor="middle">G3 · ATENCAO</text>
+  <text x="677" y="1116" font-size="9.5" fill="#6b4200" text-anchor="middle">Fotos fora do sistema</text>
+  <text x="677" y="1130" font-size="9.5" fill="#6b4200" text-anchor="middle">SAP</text>
+
+  <rect x="798" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="903" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G4 · CRITICO</text>
+  <text x="903" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">SAP nao atualizado</text>
+  <text x="903" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">com aderencia pelas areas</text>
+
+  <rect x="1024" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="1129" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G5 · CRITICO</text>
+  <text x="1129" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Controle tecnico</text>
+  <text x="1129" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">por post-its</text>
+
+  <rect x="1250" y="1082" width="210" height="60" rx="6" fill="#fef3c0" stroke="#c08a00" stroke-width="1.5"/>
+  <text x="1355" y="1100" font-size="10" font-weight="bold" fill="#6b4200" text-anchor="middle">G6 · ATENCAO</text>
+  <text x="1355" y="1116" font-size="9.5" fill="#6b4200" text-anchor="middle">Importacao de pecas</text>
+  <text x="1355" y="1130" font-size="9.5" fill="#6b4200" text-anchor="middle">atrasa execucao e SLA</text>
+
+  <rect x="1476" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="1581" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G7 · CRITICO</text>
+  <text x="1581" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Politica financeira</text>
+  <text x="1581" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">sem formalizacao escrita</text>
+
+  <rect x="1702" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="1807" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G8 · CRITICO</text>
+  <text x="1807" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Processo financeiro manual</text>
+  <text x="1807" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">e concentrado</text>
+
+  <rect x="1928" y="1082" width="210" height="60" rx="6" fill="#fef3c0" stroke="#c08a00" stroke-width="1.5"/>
+  <text x="2033" y="1100" font-size="10" font-weight="bold" fill="#6b4200" text-anchor="middle">G9 · ATENCAO</text>
+  <text x="2033" y="1116" font-size="9.5" fill="#6b4200" text-anchor="middle">Planilha vendedores</text>
+  <text x="2033" y="1130" font-size="9.5" fill="#6b4200" text-anchor="middle">com falhas de registro</text>
+
+  <rect x="2154" y="1082" width="210" height="60" rx="6" fill="#fcd8d8" stroke="#b03030" stroke-width="1.5"/>
+  <text x="2259" y="1100" font-size="10" font-weight="bold" fill="#7a1a1a" text-anchor="middle">G10 · CRITICO</text>
+  <text x="2259" y="1116" font-size="9.5" fill="#7a1a1a" text-anchor="middle">Ausencia de painel</text>
+  <text x="2259" y="1130" font-size="9.5" fill="#7a1a1a" text-anchor="middle">gerencial e visibilidade</text>
+
+  <!-- Legenda fluxos -->
+  <rect x="120" y="1162" width="880" height="50" rx="7" fill="#fff" stroke="#c8cad0" stroke-width="1"/>
+  <rect x="134" y="1176" width="12" height="12" rx="2" fill="#1a6fa0"/>
+  <text x="152" y="1186" font-size="9.5" fill="#222">Cliente (azul petroleo)</text>
+  <rect x="296" y="1176" width="12" height="12" rx="2" fill="#c98a00"/>
+  <text x="314" y="1186" font-size="9.5" fill="#222">Comercial (ambar)</text>
+  <rect x="446" y="1176" width="12" height="12" rx="2" fill="#2e8a56"/>
+  <text x="464" y="1186" font-size="9.5" fill="#222">Logistica (verde)</text>
+  <rect x="574" y="1176" width="12" height="12" rx="2" fill="#7030c0"/>
+  <text x="592" y="1186" font-size="9.5" fill="#222">Tecnica (roxo)</text>
+  <rect x="690" y="1176" width="12" height="12" rx="2" fill="#c03030"/>
+  <text x="708" y="1186" font-size="9.5" fill="#222">Financeiro (vermelho coral)</text>
+  <rect x="134" y="1196" width="12" height="12" rx="2" fill="#fff8d8" stroke="#c08000"/>
+  <text x="152" y="1206" font-size="9.5" fill="#222">Decisao/gateway</text>
+  <rect x="296" y="1196" width="12" height="12" rx="2" fill="#fcd8d8" stroke="#b03030"/>
+  <text x="314" y="1206" font-size="9.5" fill="#222">Gargalo critico</text>
+  <rect x="446" y="1196" width="12" height="12" rx="2" fill="#fef3c0" stroke="#c08a00"/>
+  <text x="464" y="1206" font-size="9.5" fill="#222">Gargalo atencao</text>
+  <rect x="574" y="1196" width="12" height="12" rx="2" fill="#e0e4f0" stroke="#6070a0"/>
+  <text x="592" y="1206" font-size="9.5" fill="#222">Elemento de sistema</text>
+  <line x1="700" y1="1202" x2="720" y2="1202" stroke="#444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="726" y="1206" font-size="9.5" fill="#222">Fluxo entre areas</text>
+
+  <!-- BORDAS FINAIS -->
+  <line x1="0" y1="98"   x2="2400" y2="98"   stroke="#b0bdd0" stroke-width="1.5"/>
+  <line x1="0" y1="1068" x2="2400" y2="1068" stroke="#b0bdd0" stroke-width="2"/>
+  <line x1="108" y1="98" x2="108" y2="1280"  stroke="#b0bdd0" stroke-width="2"/>
+  <rect x="0" y="1270" width="2400" height="10" fill="#1a2d50"/>
+
+</svg>
